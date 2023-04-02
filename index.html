@@ -25,8 +25,8 @@
   .carousel-item img {
     border-radius: 10px;
   }
-  #zabiegi {
-    margin:auto; 
+  #zabiegi { 
+    margin: auto;
     width:100%;
     color: #198754;
   }
@@ -64,6 +64,44 @@
 footer {
   width: 100%;
 }
+/* .mt-4 {
+  padding-left: 0 !important;
+} */
+@media only screen and (max-width: 767.98px) {
+  #oNas {
+    margin-left: 0;
+  }
+  #uslugi .card  {
+    justify-content: flex-start !important;
+    flex-direction: column;
+    width: 100% !important;
+  }
+  .card-body {
+    padding-left: 0 !important;
+  }
+  #Gallery  {
+    width: 100% !important;
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+    padding: 0;
+  }
+  .row .w-50 {
+    width: 100% !important;
+  }
+  .carousel-inner {
+    margin-top: 2.5rem !important;
+  }
+  #kontakt {
+    padding-left: 0.5rem !important;
+    padding-right: 0 !important;
+  }
+  #kontakt h5 {
+    text-align: left;
+  }
+  #zabiegi .card {
+    margin-left: 0 !important;
+  }
+  }
 
  </style>
  <title>PEDICA - Usługi podologiczno-kosmetyczne</title>
@@ -115,7 +153,7 @@ footer {
     <div class="container mt-4" id="oNas">
       
         <div class="mt-5 mb-4  display-3"><h1>Czym się zajmujemy..</h1></div>
-        <div class="w-50" style="color:#212529;">
+        <div class="w-100" style="color:#212529;">
           <p>Gabinet PEDICA powstał z myślą o osobach poszukujących fachowej i profesjonalnej pomocy w pielęgnacji stóp.</p>
           <p>Zabiegi wykonywane są przy użyciu najwyższej jakości sprzętu, sterylnych narzędzi i jednorazowych akcesoriów.</p>
           <p>Gabinet jest wyposażony w nowoczesny sprzęt umożliwiający wykonanie zabiegu w komfortowych warunkach.</p>
@@ -155,7 +193,7 @@ footer {
   <div class="row" id="zabiegi">
     <div class="mt-5 pt-3 mb-4  display-3"><h1>Szczegóły naszej oferty</h1></div>
     <div class="col-lg col-md">
-      <div class="card bg-image hover-zoom" style="border: none; width: 70%;">
+      <div class="card bg-image hover-zoom mx-auto" style="border: none; width: 60%;">
         <img src="./podology.jpeg" class="card-img-top img-fluid rounded-3 shadow bg-body" alt="podology">
         <div class="card-body">
           <h5 class="card-title">Zabiegi podologiczne</h5>
@@ -166,7 +204,7 @@ footer {
       </div>
     </div>
     <div class="col-lg col-md">
-      <div class="card mx-auto" style="border: none; width: 70%;">
+      <div class="card mx-auto" style="border: none; width: 60%;">
         <img src="./zabieg-kosmetyczny.jpg" class="card-img-top img-fluid rounded-3 shadow bg-body" alt="beauty treatment">
         <div class="card-body">
           <h5 class="card-title">Zabiegi kosmetyczne</h5>
