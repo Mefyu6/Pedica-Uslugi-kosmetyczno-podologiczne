@@ -14,6 +14,13 @@
         body {
            font-family: 'Lato', sans-serif;
         }
+       .navbar a {
+        color: #ffff;
+       }
+       .navbar a:hover {
+        color: grey;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+       }
         .card {
             margin-right: auto;
             margin-left: auto;
@@ -40,7 +47,7 @@
             text-align: center;
         }
         
-        .gallery{
+        .gallery {
           margin-left: 15px;
           margin-right: 15px;
         }
@@ -62,18 +69,38 @@
         .modal-img{
           width: 100%;
         }
+        @media only screen and (max-width: 992px) and (min-width: 768px) {
+          .col-md-10 {
+            margin-left: auto;
+            margin-right: auto;
+          }
+          }
+        
     </style>
     <title>Galeria zabiegów</title>
 </head>
 
 <body style="background-color: #ebfbee;">
+  <nav class="navbar navbar-expand-lg bg-success fixed-top" style="padding: auto 12px">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="https://img.icons8.com/fluency-systems-regular/25/FFFFFF/long-arrow-left.png" alt=""  class="d-inline-block align-text-top">
+        Wróć do strony głównej
+      </a>
+    </div>
+  </nav>
+  <!-- <nav class="navbar navbar-expand-lg bg-success fixed-top" id="navbar">
+    <div class="container justify-content-start" style="margin:0">
+      <a class="navbar-brand" href="index.html"><img src="https://img.icons8.com/fluency-systems-regular/25/FFFFFF/long-arrow-left.png"></a>
+      <a class="navbar-brand" style="color: white; ; font-family: 'Lato'; padding-left: 3px;" href="index.html">Wróć do strony głównej</a>
+    </div>
+  </nav> -->
   
-  <header style="letter-spacing: 5px; margin-top: 25px;font-family: 'Roboto', sans-serif;font-weight: 700;">GALERIA ZABIEGÓW</header>
+  <header style="letter-spacing: 3px; margin-top: 75px;font-family: 'Roboto', sans-serif;font-weight: 700;">GALERIA ZABIEGÓW</header>
   
-
   <section class="gallery">
     <div class="row">
-      <div class="col-lg-4 col-md- col-sm-10">
+      <div class="col-lg-4 col-md-10 col-sm-12">
         <div class="card">
             <img src="./stylizacja paznokci.jpg" class="card-img-top" alt="gallery">
               <div class="card-body">
@@ -81,7 +108,7 @@
               </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md- col-sm-10">
+      <div class="col-lg-4 col-md-10 col-sm-12">
         <div class="card">
             <img src="./podology.jpeg" class="card-img-top" alt="gallery">
               <div class="card-body">
@@ -89,7 +116,7 @@
               </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md- col-sm-10">
+      <div class="col-lg-4 col-md-10 col-sm-12">
         <div class="card">
             <img src="./zabieg kosmetyczny 2.jpg" class="card-img-top" alt="gallery">
               <div class="card-body">
@@ -97,7 +124,7 @@
               </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md- col-sm-10">
+      <div class="col-lg-4 col-md-10 col-sm-12">
         <div class="card">
             <img src="./zabieg kosmetyczny 3.jpg" class="card-img-top" alt="gallery">
               <div class="card-body">
@@ -105,7 +132,7 @@
               </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md- col-sm-10">
+      <div class="col-lg-4 col-md-10 col-sm-12">
         <div class="card">
             <img src="./zabieg podologiczny 2.jpg" class="card-img-top" alt="gallery">
               <div class="card-body">
@@ -113,7 +140,7 @@
               </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md- col-sm-10">
+      <div class="col-lg-4 col-md-10 col-sm-12">
         <div class="card">
             <img src="./zabieg podologiczny 3.jpg" class="card-img-top" alt="gallery">
               <div class="card-body">
@@ -121,7 +148,7 @@
               </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md- col-sm-10">
+      <div class="col-lg-4 col-md-10 col-sm-12">
         <div class="card">
             <img src="./zabieg-kosmetyczny.jpg" class="card-img-top" alt="gallery">
               <div class="card-body">
