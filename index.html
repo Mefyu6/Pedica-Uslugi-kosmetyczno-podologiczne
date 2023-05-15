@@ -25,7 +25,11 @@
     .carousel-inner>.carousel-item>img {
       margin: auto;
     }
+  
 
+      button.carousel-control-prev.text-primary {
+       
+      }
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       height: 100px;
@@ -243,8 +247,8 @@
       }
 
       .carousel-inner>.carousel-item>img {
-        height: 200px;
-        width: 200px !important;
+        width: 100% !important;
+        padding: 5px;
       }
 
       #carouselExampleFade {
@@ -252,11 +256,11 @@
       }
 
       button.carousel-control-next {
-        width: 60%;
+        display: none;
       }
 
       button.carousel-control-prev.text-primary {
-        width: 60%;
+       display: none;
       }
 
       iframe.rounded.w-100.h-100.shadow.bg-body {
@@ -410,8 +414,8 @@
       }
 
       .carousel-inner>.carousel-item>img {
-        height: 300px;
-        width: 300px !important;
+        width: 80% !important;
+        padding: 5px
       }
 
       #carouselExampleFade {
@@ -419,11 +423,11 @@
       }
 
       button.carousel-control-next {
-        width: 42%;
+      
       }
 
       button.carousel-control-prev.text-primary {
-        width: 42%;
+        
       }
 
       iframe.rounded.w-100.h-100.shadow.bg-body {
@@ -577,17 +581,16 @@
       }
 
       .carousel-inner>.carousel-item>img {
-        height: 400px;
-        width: 400px !important;
+        width: 70% !important;
       }
 
 
       button.carousel-control-next {
-        width: 43%;
+        
       }
 
       button.carousel-control-prev.text-primary {
-        width: 43%;
+       
       }
       .ratio  {
         max-width: 80%;
@@ -600,17 +603,18 @@
         margin-left: 1.9rem;
       }
       .carousel-inner>.carousel-item>img {
-        height: 500px;
-        width: 500px !important;
+       width: 60% !important;
+      }
+      .carousel-inner {
+        margin-top: 2.5rem !important;
       }
 
-
       button.carousel-control-next {
-        width: 43%;
+       
       }
 
       button.carousel-control-prev.text-primary {
-        width: 43%;
+      
       }
       .col-lg-6 {
         width: 80% !important;
@@ -623,17 +627,14 @@
 
     @media only screen and (min-width: 1200px) {
       .carousel-inner>.carousel-item>img {
-        height: 500px;
-        width: 500px !important;
+        width: 50% !important;
       }
-      button.carousel-control-next {
-        width: 50%;
+      .carousel-inner {
+        margin-top: 2.5rem !important;
       }
-
-      button.carousel-control-prev.text-primary {
-        width: 50%;
+        
       }
-      #zabiegi {}
+     
       #zabiegi h1 {
         
         margin-left: 1.8em;
@@ -642,7 +643,7 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
       }
-    }
+    
   </style>
   <title>PEDICA - Usługi podologiczno-kosmetyczne</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -895,11 +896,7 @@
         <div class="carousel-item">
           <img src="./zabieg podologiczny.jpeg" class="d-block w-25" alt="...">
         </div>
-        <div class="carousel-item">
-          <img src="./zabieg-kosmetyczny.jpg" class="d-block w-25" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev text-primary" type="button" data-bs-target="#carouselExampleFade"
+        <button class="carousel-control-prev text-primary" type="button" data-bs-target="#carouselExampleFade"
         data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -908,6 +905,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
+      </div>
     </div>
 
     <!-- Stopka -->
