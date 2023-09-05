@@ -18,6 +18,39 @@
       font-family: 'Lato', sans-serif;
       font-weight: 400;
     }
+    .video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.w-100 p {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: slide-up 2s ease forwards;
+}
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
     .carousel-inner>.carousel-item>img {
       margin: auto;
     }
@@ -93,7 +126,7 @@
       color: grey;
     }
     .navbar-nav li {
-      padding: 0 5px;
+      padding: 0 20px;
     }
     footer {
       width: 100%;
@@ -102,12 +135,23 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 600;
     }
+
+    /* Media Queries */
     @media only screen and (max-width: 576px) {
-      header .mt-5 {
-        margin-top: 0 !important;
+      .navbar>.container {
+        padding-right: initial;
       }
-      header .p-3 {
-        padding: 0 !important;
+      .hero__content {
+        padding: 5rem 0 !important;
+      }
+      .hero__content h1 {
+        font-weight: 900;
+      }
+      .hero__content h2 {
+        font-weight: 800;
+      }
+      .video-section {
+        height: auto;
       }
       #oNas {
         margin-left: 0;
@@ -242,8 +286,14 @@
       .container {
         max-width: 100% !important;
       }
-      header .mt-5 {
-        margin-top: 0 !important;
+      .hero__content {
+        padding: 5rem 0 !important;
+      }
+      .hero__content h1 {
+        font-weight: 900;
+      }
+      .hero__content h2 {
+        font-weight: 800;
       }
       header .p-3 {
         padding: 0 !important;
@@ -366,8 +416,14 @@
       .container {
         max-width: 100% !important;
       }
-      header .mt-5 {
-        margin-top: 0 !important;
+      .hero__content {
+        padding: 5rem 0 !important;
+      }
+      .hero__content h1 {
+        font-weight: 900;
+      }
+      .hero__content h2 {
+        font-weight: 800;
       }
       header .p-3 {
         padding: 0 !important;
@@ -502,6 +558,7 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
       }
+      
     }
   </style>
   <title>PEDICA - Usługi podologiczno-kosmetyczne</title>
@@ -514,27 +571,27 @@
   <!-- NAWIGACJA -->
   <nav class="navbar navbar-expand-lg bg-success fixed-top" id="navbar">
     <div class="container">
-      <a class="navbar-brand font-monospace" style="color: white; font-weight: bold;" href="#">Pedica - Toruń</a>
+      <a class="navbar-brand font-monospace" style="color: white; font-weight: bold;margin-right: 200px;" href="#">Pedica - Toruń</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav" style="font-family: 'Lato', sans-serif;">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" style="padding: 0 60px;">
           <li class="nav-item">
-            <a class="nav-link" href="#oNas">O nas</a>
+            <a class="nav-link" style="border-right: 1px solid #ccc;" href="#oNas">O nas</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#uslugi">Usługi</a>
+            <a class="nav-link" style="border-right: 1px solid #ccc;" href="#uslugi">Usługi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#zabiegi">Zabiegi</a>
+            <a class="nav-link" style="border-right: 1px solid #ccc;" href="#zabiegi">Zabiegi</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./Galeria zabiegow.html">Galeria zabiegów</a>
+            <a class="nav-link" style="border-right: 1px solid #ccc;" href="./Galeria zabiegow.html">Galeria zabiegów</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#kontakt">Kontakt</a>
+            <a class="nav-link" style="border-right: 1px solid #ccc;" href="#kontakt">Kontakt</a>
           </li>
         </ul>
       </div>
@@ -542,7 +599,13 @@
   </nav>
 
   <!-- NAGŁÓWEK -->
-  <header class="pt-5 mt-5" style="font-family: 'Roboto', sans-serif;">
+  <header class=" mt-5" style="font-family: 'Roboto', sans-serif;position: relative;
+  z-index: 1;">
+    <div class="video-section">
+      <video autoplay loop muted playsinline>
+        <source src="./pexels-ron-lach-8131885 (1440p).mp4" type="video/mp4">
+      </video>
+      <div class="hero__content" style="padding: 5rem 0; text-align: center;">
     <h1 class="text-center display-1">PEDICA</h1>
     <hr style="color:#198754; width:20%; height: 2px; margin:auto;">
     <h2 class="text-center mt-5">Usługi podologiczno-kosmetyczne</h2>
@@ -552,6 +615,8 @@
           d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
       </svg>123 456 789</h2>
     <h2 class="text-center">Dojazd do osób starszych i niepełnosprawnych<br> na terenie Torunia</h2>
+  </div>
+  </div>
   </header>
 
   <!--O NAS-->
@@ -560,7 +625,7 @@
     <div class="mt-5 mb-4  display-3">
       <h1 style="font-family: 'Montserrat', sans-serif;font-weight: 700;">Czym się zajmujemy..</h1>
     </div>
-    <div class="w-100" style="color:#212529;">
+    <div class="w-100" style="color:#212529; font-size: 1.3rem;">
       <p>Gabinet PEDICA powstał z myślą o osobach poszukujących fachowej i profesjonalnej pomocy w pielęgnacji stóp.</p>
       <p>Zabiegi wykonywane są przy użyciu najwyższej jakości sprzętu, sterylnych narzędzi i jednorazowych akcesoriów.
       </p>
@@ -574,7 +639,7 @@
       <div class="card-body">
         <h5 class="card-title pb-2" style="font-family: 'Montserrat', sans-serif;font-weight: 600;">USŁUGI PODOLOGICZNE
         </h5>
-        <h6 class="card-subtitle mb-2 pb-2" style="font-family: 'Montserrat', sans-serif; font-weight: 500;">Usługi
+        <h6 class="card-subtitle mb-2 pb-2" style="font-family: 'Montserrat', sans-serif; font-weight: 500;font-size: 1.1rem;">Usługi
           Podologiczne</h6>
         <p class="card-text" style="color: #212529;">Specjalizujemy się w zabiegach pielęgnacyjnych i profilaktyce
           stóp.<br><br>Wykonujemy kompleksowe zabiegi związane z pielęgnacją stóp kobiet i mężczyzn, zarówno u osób
@@ -588,7 +653,7 @@
         <h5 class="card-title pb-2" style="color: #198754; font-family: 'Montserrat', sans-serif; font-weight: 600;">
           USŁUGI KOSMETYCZNE</h5>
         <h6 class="card-subtitle mb-2 pb-2"
-          style="color: #198754; font-family: 'Montserrat', sans-serif;font-weight: 500;">Usługi Kosmetyczne</h6>
+          style="color: #198754; font-family: 'Montserrat', sans-serif;font-weight: 500;font-size: 1.1rem;">Usługi Kosmetyczne</h6>
         <p class="card-text" style="color: #212529;">Do państwa dyspozycji oddajemy stanowisko do zabiegów kosmetycznych
           oraz do stylizacji paznokci. W trosce o zadowolenie i potrzeby naszych klientów stale rozwijamy naszą ofertę.
           <br>
@@ -603,7 +668,7 @@
   </div>
 
   <!-- OBRAZEK ŚRODEK -->
-  <img src="./female-leg.jpg" class="female img-fluid shadow mt-5 mb-5 bg-body rounded " style="border-radius: 20px;"
+  <img src="./female-leg.jpg" id="parallax__image" class="female img-fluid shadow mt-5 mb-5 bg-body rounded " style="border-radius: 20px;"
     alt="female leg">
 
   <!-- ZABIEGI -->
@@ -626,8 +691,8 @@
       </div>
     </div>
     <div class="col-lg col-md">
-      <div class="card mx-auto" style="border: none; width: 70%;">
-        <img src="./zabieg-kosmetyczny.jpg" class="card-img-top img-fluid rounded-3 shadow bg-body"
+      <div class="card bg-image hover-zoom mx-auto" style="border: none; width: 70%;">
+        <img src="./zabieg-kosmetyczny.jpg" id="zabiegi__images" class="card-img-top img-fluid rounded-3 shadow bg-body"
           alt="beauty treatment">
         <div class="card-body">
           <h5 class="card-title" style="font-family: 'Montserrat', sans-serif;font-weight: 600;">Zabiegi kosmetyczne
